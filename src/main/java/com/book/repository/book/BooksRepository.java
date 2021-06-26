@@ -2,10 +2,12 @@ package com.book.repository.book;
 
 import com.book.model.book.Books;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+@Repository
 public interface BooksRepository extends MongoRepository<Books, String> {
 	
 	@Override
@@ -20,13 +22,13 @@ public interface BooksRepository extends MongoRepository<Books, String> {
 	}
 	
 	default void updateProduct(Books books){
-		books.setPublishedDate(LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm: ss")));
+		books.setReleasedDate(LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm: ss")));
 		save(books);
 	}
 	
 	
-	Boolean existsByBookName(String name);
+	Boolean existsByBookBrandBrandName(String name);
 	
-	Books findBooksByBookName(String name);
+	Books findBooksByBookBrandBrandName(String name);
 	
 }

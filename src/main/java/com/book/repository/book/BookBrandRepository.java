@@ -4,6 +4,9 @@ import com.book.model.book.BookBrand;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 @Repository
 public interface BookBrandRepository extends MongoRepository<BookBrand, String> {
 	
@@ -15,7 +18,7 @@ public interface BookBrandRepository extends MongoRepository<BookBrand, String> 
 		
 		BookBrand bookBrand =findById(id).orElse(null);
 		assert bookBrand != null;
-		bookBrand.setCurrent(false);
+		bookBrand.setActive(false);
 		save(bookBrand);
 		
 	}
@@ -23,8 +26,6 @@ public interface BookBrandRepository extends MongoRepository<BookBrand, String> 
 	BookBrand findBookBrandByBrandName(String name);
 	
 	boolean existsBookBrandByBrandName(String name);
-
-	
 }
 
 

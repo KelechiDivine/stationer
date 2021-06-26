@@ -7,9 +7,6 @@ import lombok.NonNull;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.HashSet;
-import java.util.Set;
-
 @Data
 @Document
 @AllArgsConstructor
@@ -21,27 +18,15 @@ public class BookCategory {
 	private String id;
 	
 	@NonNull
-	private String title;
+	private String name;
 	
 	@NonNull
 	private boolean isCurrent;
 	
 	@NonNull
-	private String bookType;
+	private String registeredDate;
 	
 	@NonNull
-	private String brand;
-	
-	@NonNull
-	private Set<Books> book;
-	
-	@NonNull
-	private String registrationDate;
-	
-	
-	public void setBooks(Books books){
-		book.add(books);
-	}
-	
+	private String modifiedDate;
 	
 }

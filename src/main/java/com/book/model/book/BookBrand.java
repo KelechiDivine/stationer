@@ -12,8 +12,6 @@ import java.util.Set;
 @Document
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@ToString
 
 
 public class BookBrand {
@@ -24,19 +22,17 @@ public class BookBrand {
 	private String brandName;
 	
 	@NonNull
-	private  boolean isCurrent;
+	private boolean isActive;
 	
 	@DBRef
 	private Set<Books> book;
 	
-//	@NonNull
-//	private BookCategory bookCategory;
 	
-	
-	public void setBooks(Books books){
-		if (book == null){
-			 book = new HashSet<>();
+	public void setBooks(Books books) {
+		if (book == null) {
+			book = new HashSet<>();
 		}
 		book.add(books);
 	}
+	
 }

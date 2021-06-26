@@ -1,9 +1,6 @@
 package com.book.model.book;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -11,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 
 public class Books {
 	
@@ -21,18 +19,23 @@ public class Books {
 	private String summary;
 	
 	@NonNull
-	private String publishedDate;
+	private String bookSerialNumber;
+	
+	@NonNull
+	private boolean bookPages;
+	
+	@NonNull
+	private BookCategory bookCategory;
+	
+	private BookBrand bookBrand;
 	
 	@NonNull
 	private boolean isCurrent;
 	
 	@NonNull
-	private String bookNumber;
+	private String isbnNumber;
 	
 	@NonNull
-	private String bookName;
+	private String releasedDate;
 	
-	
-	@NonNull
-	private BookCategory bookCategory;
 }
