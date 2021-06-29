@@ -35,9 +35,6 @@ class BookBrandRepositoryTest {
 	
 	@Test
 	public void testThatWeCanCreateABookBrand(){
-//	Books books =booksRepository.findById("60d537f8c5a92712d4b85c25").get();
-//	assertNotNull(books);
-//
 	bookBrand.setBrandName("The cry of an Africa child");
 	bookBrand.setActive(true);
 	assertDoesNotThrow(()-> {
@@ -46,7 +43,6 @@ class BookBrandRepositoryTest {
 
 	assertThat(bookBrand).isNotNull();
 	log.info("book brand --> {}", bookBrand);
-
 	}
 	
 	@Test

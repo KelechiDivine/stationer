@@ -57,3 +57,10 @@ build/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 >>>>>>> 697a813a8c8f6156a13b087f1579e1039b78c27b
+
+pom.xml
+target
+stationary.iml
+mvnw.cmd
+mvnw
+.mvn

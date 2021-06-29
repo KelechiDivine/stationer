@@ -4,9 +4,6 @@ import com.book.model.book.BookBrand;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 @Repository
 public interface BookBrandRepository extends MongoRepository<BookBrand, String> {
 	
