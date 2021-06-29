@@ -18,7 +18,7 @@ public interface BookCategoryRepository extends MongoRepository<BookCategory, St
 	boolean existsByName(String name);
 	
 	
-	default void deleteByBrandAndId(String Id){
+	default void deactivateById(String Id){
 	BookCategory bookCategory= findById(Id).orElse(null);
 	assert bookCategory != null;
 	bookCategory.setCurrent(false);

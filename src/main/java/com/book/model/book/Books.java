@@ -21,7 +21,6 @@ public class Books {
 	@NonNull
 	private String bookSerialNumber;
 	
-	@NonNull
 	private boolean bookPages;
 	
 	@NonNull
@@ -29,7 +28,6 @@ public class Books {
 	
 	private BookBrand bookBrand;
 	
-	@NonNull
 	private boolean isCurrent;
 	
 	@NonNull
