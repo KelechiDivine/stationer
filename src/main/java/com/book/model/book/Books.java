@@ -21,7 +21,8 @@ public class Books {
 	@NonNull
 	private String bookSerialNumber;
 	
-	private boolean bookPages;
+	@NonNull
+	private Boolean isActive;
 	
 	@NonNull
 	private BookCategory bookCategory;

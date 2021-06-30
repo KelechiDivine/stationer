@@ -48,7 +48,7 @@ class BookBrandRepositoryTest {
 	@Test
 	public void testThatWeCanFindById(){
 		
-		BookBrand foundBrand = bookBrandRepository.findById("60d537f8c5a92712d4b85c25")
+		BookBrand foundBrand = bookBrandRepository.findById("60da12fa321bae7f8b8a6d81")
 				.orElse(null);
 		assertThat(foundBrand).isNotNull();
 		log.info("existed brand details --> {}", foundBrand);
@@ -57,15 +57,15 @@ class BookBrandRepositoryTest {
 	@Test
 	public void testThatWeCanDeactivateBook(){
 		
-		AssertionsForClassTypes.assertThat(bookBrandRepository.existsById("60d537f8c5a92712d4b85c25")).isTrue();
-		BookBrand bookBrand = bookBrandRepository.findById("60d537f8c5a92712d4b85c25").orElse(null);
-		bookBrandRepository.deactivateBookBrand("60d537f8c5a92712d4b85c25");
+		AssertionsForClassTypes.assertThat(bookBrandRepository.existsById("60da12fa321bae7f8b8a6d81")).isTrue();
+		BookBrand bookBrand = bookBrandRepository.findById("60da12fa321bae7f8b8a6d81").orElse(null);
+		bookBrandRepository.deactivateBookBrand("60da12fa321bae7f8b8a6d81");
 		assert  bookBrand != null;
 	}
 	
 	@Test
 	public void testThatWeCanUpdateABookBrand(){
-		bookBrand = bookBrandRepository.findById("60d5747fc879241d6e134793").orElse(null);
+		bookBrand = bookBrandRepository.findById("60da12fa321bae7f8b8a6d81").orElse(null);
 		AssertionsForClassTypes.assertThat(bookBrand).isNotNull();
 		bookBrand.setActive(true);
 		bookBrandRepository.save(bookBrand);

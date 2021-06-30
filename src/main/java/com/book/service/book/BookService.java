@@ -2,6 +2,7 @@ package com.book.service.book;
 
 import com.book.dto.RegisterBookDto;
 import com.book.dto.UpdateBookDto;
+import com.book.model.book.Books;
 import com.book.service.exception.BookException;
 
 import java.awt.print.Book;
@@ -13,13 +14,13 @@ public interface BookService {
 	
 	void registerBook(RegisterBookDto registerBookDto) throws BookException;
 	
-	Book findById(String id);
+	Books findById(String id);
 	
-	Book findProductByName(String name);
+	Books findServiceByName(String name);
 	
-	List<Book> findAllBooks();
+	List<Books> findAllBooks();
 	
-	void discontinueBook(String id);
+
 	
 	void updateBook(UpdateBookDto updateBookDto) throws BookException;
 }
