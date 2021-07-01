@@ -2,6 +2,7 @@ package com.book.service.book;
 
 import com.book.model.book.Books;
 import com.book.repository.book.BooksRepository;
+import com.book.repository.book.RepositoryDataConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ import static org.mockito.Mockito.*;
 
 @Slf4j
 @DataMongoTest
-@ContextConfiguration(classes = ServiceDataConfig.class)
+@ContextConfiguration(classes = RepositoryDataConfig.class)
 
 class BookServiceImplTest {
 	

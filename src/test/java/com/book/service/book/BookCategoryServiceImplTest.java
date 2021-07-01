@@ -2,6 +2,7 @@ package com.book.service.book;
 
 import com.book.model.book.BookCategory;
 import com.book.repository.book.BookCategoryRepository;
+import com.book.repository.book.RepositoryDataConfig;
 import com.book.service.exception.BookException;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,7 +20,7 @@ import static org.mockito.Mockito.*;
 
 @Slf4j
 @DataMongoTest
-@ContextConfiguration(classes = ServiceDataConfig.class)
+@ContextConfiguration(classes = RepositoryDataConfig.class)
 
 class BookCategoryServiceImplTest {
 	
