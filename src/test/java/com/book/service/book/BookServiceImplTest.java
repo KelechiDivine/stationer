@@ -34,7 +34,6 @@ class BookServiceImplTest {
 		books = new Books();
 	}
 	
-	
 	@Test
 	public void testThatWeCanFindByProductName(){
 	when(booksRepository.findBooksByBookBrandBrandName(any())).thenReturn(books);
